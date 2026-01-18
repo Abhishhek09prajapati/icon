@@ -19,9 +19,10 @@ body{
     margin-top: 50px;
 }
 table tr th,td{
-    border: 0.5px solid black;
-    padding: 3px 7px;
+    border: 0px solid black;
+    padding: 6px 10px;
     background-color: white;
+
 
 }
 .calculator button{
@@ -50,4 +51,7 @@ table tr th,td{
     border: none;
     margin: 0px 5px;
     padding: 10px;
+}
+.upperbil{
+    margin: auto;width: max-content;height: min-content;background-color: rgb(246, 235, 235);padding: 5px;
 }
