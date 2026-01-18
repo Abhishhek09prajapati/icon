@@ -12,9 +12,7 @@ fetch('https://api.npoint.io/03185e6a9bfcd7262ccc')
   .then(res => res.json())
   .then(data => {
     allData = data;
-    console.log(allData)
     dataresult.innerHTML = "";   // clear loading text
-    console.log("Data Loaded Successfully");
   })
   .catch(err => {
     dataresult.innerHTML = "<p>Error loading data</p>";
@@ -36,7 +34,7 @@ const result = allData.filter(item => {
 });
 
   if (result.length === 0) {
-    dataresult.innerHTML = "<p>No result found</p>";
+    dataresult.innerHTML = `this medicine is not avaiable`
     return;
   }
 
