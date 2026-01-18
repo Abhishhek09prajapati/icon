@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Header & Footer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="./calculator/" class="nav__logo">Iconstar Business</a>
+
+        
+
+            <div class="nav__actions">
+                <a href="#" class="nav__action-button">Message</a>
+
+               
+            </div>
+        </nav>
+    </header>
+
+    <div class="main1" style="background-color: blue;">
+        <h3>IconStar Business</h3>
+        <p>There are Type of id which are given below</p>
+        <ol>
+            <li>Master Distributor Id (Free of Cost)</li>
+            <li>Distributor Id (Free of Cost)</li>
+            <li>Cutomer Id (Free of Cost)</li>
+        </ol>
+        <div id="formdata">
+            <select name="" id="listid">
+                <option value=" ">Select itmes in list</option>
+                <option value="MD id">Master Distributor id</option>
+                <option value="D id">Distributor id</option>
+                <option value="C id">Cutomer id</option>
+            </select>
+            <label for="">Name</label ><input id="name1" type="text" required>
+            <label for="">Mobile Number</label ><input id="mobile1" type="text" required>
+            <label for="">Gmail</label ><input id="gmail1" type="text" required>
+            <label for="">Customer Address</label ><input id="address1" type="text" required><br>
+            <button  name="" id="messagetowhatsapp">Submit</button>
+            <div id="whatsappbtn"></div>
+        </div>
+    </div>
+    
+
+   
+        <div class="footer__container container">
+            <div class="footer__section">
+                <h3 class="footer__title">About Us</h3>
+                <p class="footer__description">
+                    We are a team dedicated to provide mobile recharge and dth recharge id to shop holder.
+                </p>
+            </div>
+
+            <div class="footer__section">
+                <h3 class="footer__title">Quick Links</h3>
+                <ul class="footer__links" type="none">
+                    <li><a href="#" class="footer__link">Careers</a></li>
+                    <li><a href="#" class="footer__link">Blog</a></li>
+                    <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer__link">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h3 class="footer__title">Contact</h3>
+                <div class="footer__contact">
+                    <p><i class="fa-solid fa-location-dot"></i> Lucknow, UP, India</p>
+                    <p><i class="fa-solid fa-envelope"></i>abhishekofficialmail09@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 6387215755</p>
+                </div>
+            </div>
+            
+            <div class="footer__section">
+                <h3 class="footer__title">Newsletter</h3>
+                <p class="footer__description">Subscribe to get our latest updates.</p>
+                <form class="footer__form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="footer__input" id="newsletter-email" required>
+                    <button type="submit" class="footer__button">Subscribe</button>
+                </form>
+                <p id="form-message"></p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__socials">
+                <a href="https://www.facebook.com/share/16xbgjJS2N/" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/share/16xbgjJS2N/" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/iconstar_business?igsh=MWpsYWxyZXZmZWE1NQ==" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/iconstar_business?igsh=MWpsYWxyZXZmZWE1NQ==" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="footer__copy">&#169; <span id="current-year"></span> Gemini. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
