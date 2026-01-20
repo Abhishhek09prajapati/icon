@@ -40,7 +40,6 @@ inputsearch.addEventListener('input', () => {
 
   result.forEach(item => {
     const div = document.createElement('div');
-
     div.style.border = "1px solid #000000";
     div.style.padding = "8px";
     div.style.margin = "6px 0px";
@@ -53,33 +52,40 @@ inputsearch.addEventListener('input', () => {
 
     // WhatsApp redirect with encoding
     div.addEventListener('click', () => medicinesearch(item));
-
     dataresult.appendChild(div);
   });
 });
- var closebtn1 = document.getElementById('list');
- closebtn1.style.display = "none"
 
+var closebtn1 = document.getElementById('list');
+closebtn1.style.display = "none";
+
+var medicne2 = [] ;
 
 function medicinesearch(item) {
   var medicinename = document.getElementById("medicinename");
   var medicneformula = document.getElementById("medicneformula");
+
   medicinename.innerHTML = item.name
   medicneformula.innerHTML = item.description
-   closebtn1.style.display = "block"
-  // const message = `${item.name} - ${item.description}`;
-  // const encoded = encodeURIComponent(message);
-  // window.location.href =  `https://wa.me/916387215755?text=${encoded}`;
 
+  medicne2.push(item.name,item.description)
+  console.log(medicne2)
+  closebtn1.style.display = "block"
 }
 
-function closeBtn(){
+function closeBtn() {
   closebtn1.style.display = "none"
 }
 
-function googlesearch(){
+
+function deepumedical() {
+  var message = `${medicne2[0]}`;
+  const encoded = encodeURIComponent(message);
+  window.location.href = `https://wa.me/916387215755?text=${encoded}`;
 
 }
-function deepumedical(){
-  
+function googlesearch() {
+  var messagek = `${medicne2[0]}`;
+  const encodedk = encodeURIComponent(messagek);
+  window.open(`https://google.com/search?q=${encodedk}`, "_blank");
 }
