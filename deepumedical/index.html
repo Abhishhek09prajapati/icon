@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Search</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=0" />
 </head>
 
 <body>
@@ -14,9 +15,21 @@
         <input id="searchinput" type="text" placeholder="Enter medicine name">
     </div>
     <div id="resultdata">
-        
+
     </div>
-    <div id="list"></div>
+
+    <div id="list">
+        <span onclick="closeBtn()" class="material-symbols-outlined closeBtn">close</span>
+        <h1 id="medicinename">Medicine Name</h1>
+        <h3 id="medicneformula">Formula</h3>
+
+        <div class="btn-group">
+            <button onclick="googlesearch()" class="google">Google Search</button>
+            <button onclick="deepumedical()" class="inquiry">Inquiry to Deepu Medical</button>
+        </div>
+    </div>
+
 </body>
 <script src="/deepumedical/index.js"></script>
-</html> 
+
+</html>

@@ -27,11 +27,11 @@ inputsearch.addEventListener('input', () => {
 
   if (!value) return;
 
-  
 
-const result = allData.filter(item => {
+
+  const result = allData.filter(item => {
     return item.name.toLowerCase().includes(value) || item.description.toLowerCase().includes(value)
-});
+  });
 
   if (result.length === 0) {
     dataresult.innerHTML = `this medicine is not avaiable`
@@ -52,14 +52,34 @@ const result = allData.filter(item => {
     `;
 
     // WhatsApp redirect with encoding
-    div.addEventListener('click', () => {
-      const message = `${item.name} - ${item.description}`;
-      const encoded = encodeURIComponent(message);
-
-      window.location.href =
-        `https://wa.me/916387215755?text=${encoded}`;
-    });
+    div.addEventListener('click', () => medicinesearch(item));
 
     dataresult.appendChild(div);
   });
 });
+ var closebtn1 = document.getElementById('list');
+ closebtn1.style.display = "none"
+
+
+function medicinesearch(item) {
+  var medicinename = document.getElementById("medicinename");
+  var medicneformula = document.getElementById("medicneformula");
+  medicinename.innerHTML = item.name
+  medicneformula.innerHTML = item.description
+   closebtn1.style.display = "block"
+  // const message = `${item.name} - ${item.description}`;
+  // const encoded = encodeURIComponent(message);
+  // window.location.href =  `https://wa.me/916387215755?text=${encoded}`;
+
+}
+
+function closeBtn(){
+  closebtn1.style.display = "none"
+}
+
+function googlesearch(){
+
+}
+function deepumedical(){
+  
+}

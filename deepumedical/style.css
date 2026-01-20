@@ -65,3 +65,68 @@
     height: max-content;
     /* border: 1px solid black; */
 }
+
+#list {
+    width: max-content;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border: 1px solid black;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.closeBtn {
+    width: 100%;
+    text-align: right;
+}
+
+#medicinename {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    width: max-content;
+}
+
+#medicneformula {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    width: max-content;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.google {
+    background-color: #4285F4;
+    color: white;
+}
+
+.google:hover {
+    background-color: #3367d6;
+}
+
+.inquiry {
+    background-color: #27ae60;
+    color: white;
+}
+
+.inquiry:hover {
+    background-color: #1e8449;
+}
