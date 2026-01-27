@@ -26,9 +26,6 @@ inputsearch.addEventListener('input', () => {
   dataresult.innerHTML = "";
 
   if (!value) return;
-
-
-
   const result = allData.filter(item => {
     return item.name.toLowerCase().includes(value) || item.description.toLowerCase().includes(value)
   });
@@ -64,12 +61,10 @@ var medicne2 = [] ;
 function medicinesearch(item) {
   var medicinename = document.getElementById("medicinename");
   var medicneformula = document.getElementById("medicneformula");
-
   medicinename.innerHTML = item.name
   medicneformula.innerHTML = item.description
-
   medicne2.push(item.name,item.description)
-  console.log(medicne2)
+  // console.log(medicne2)
   closebtn1.style.display = "block"
 }
 
