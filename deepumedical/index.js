@@ -44,7 +44,7 @@ inputsearch.addEventListener('input', () => {
 
     div.innerHTML = `
       <b>${item.name}</b><br>
-      ${item.description}
+      <span style="width:100% ; heigth:max-width;"> ${item.description}</span>
     `;
 
     // WhatsApp redirect with encoding
