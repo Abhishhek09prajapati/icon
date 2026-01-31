@@ -8,6 +8,7 @@ let medicne2 = [];
 closebtn1.style.display = "none";
 dataresult.innerHTML = "<p>Loading data...</p>";
 
+
 fetch("https://api.npoint.io/03185e6a9bfcd7262ccc")
   .then((res) => res.json())
   .then((data) => {
