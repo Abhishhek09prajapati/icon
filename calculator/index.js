@@ -1,9 +1,11 @@
 var result = 0;
+var totalmrp = 0;
 function addTable() {
     const itmesname = document.getElementById('itemname').value.trim();
     const mrp = document.getElementById('mrp').value.trim();
     const discount = document.getElementById('discount').value.trim();
     const qty = document.getElementById('qty').value.trim();
+
     
 
     if (!itmesname || !mrp || !discount || !qty) {
@@ -30,12 +32,24 @@ function addTable() {
 
   // Display formatted date and time
   document.getElementById("date1").innerText = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+
+
+
+
     var rate = mrp-mrp*discount/100 ;
     var total = rate*qty ;
+
+    totalmrp += mrp*qty ;
+
     result += total ;
+
+
     document.getElementById('result').innerHTML = "Total Amount "+result ;
+    document.getElementById('totalmrp').innerHTML=  `Aapka total mrp yeh hai ${totalmrp} rs hai` ;
     
     const tablebody = document.getElementById('dataTable').querySelector('tbody');
+
+
     const newRow = tablebody.insertRow();
 
     newRow.insertCell(0).textContent = qty;
