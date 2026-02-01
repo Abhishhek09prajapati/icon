@@ -7,7 +7,6 @@ function addTable() {
     const qty = document.getElementById('qty').value.trim();
 
 
-
     if (!itmesname || !mrp || !discount || !qty) {
         alert("Please Inter All Value")
         return
@@ -34,8 +33,6 @@ function addTable() {
     document.getElementById("date1").innerText = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
 
-
-
     var rate = mrp - mrp * discount / 100;
     var total = rate * qty;
 
@@ -47,17 +44,13 @@ function addTable() {
     document.getElementById('result').innerHTML = "Total Amount " + result;
     document.getElementById('totalmrp').innerHTML = `Aapka total mrp yeh hai ${totalmrp} rs hai`;
 
+
     const tablebody = document.getElementById('dataTable').querySelector('tbody');
 
 
     const newRow = tablebody.insertRow();
 
     // Desktop: right click delete (optional)
-    newRow.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-        newRow.remove();
-    });
-
     newRow.insertCell(0).textContent = qty;
     newRow.insertCell(1).textContent = itmesname;
     newRow.insertCell(2).textContent = mrp;
