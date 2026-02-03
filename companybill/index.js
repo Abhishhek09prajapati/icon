@@ -16,3 +16,14 @@ function addpart() {
 function closeit() {
     showdiv.style.display = "none"
 }
+
+var showamont = document.getElementsByClassName('addamount')[0];
+
+function amount(){
+   showamont.style.display = "block"
+}
+
+function amountadd(){
+    var addamountval = document.getElementById('addamountval').value;
+    
+}

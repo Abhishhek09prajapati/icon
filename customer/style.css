@@ -1,0 +1,15 @@
+#customerDetails{
+    /* background-color: red; */
+    max-width: max-content;
+    padding: 10px;
+    box-sizing: border-box;
+    color: rgb(236, 7, 7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    border-radius: 20px;
+    display: none;
+
+}
