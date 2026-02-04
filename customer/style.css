@@ -1,15 +1,112 @@
-#customerDetails{
-    /* background-color: red; */
-    max-width: max-content;
-    padding: 10px;
-    box-sizing: border-box;
-    color: rgb(236, 7, 7);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 1px solid black;
-    border-radius: 20px;
-    display: none;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f7;
+}
 
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 420px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.searchBox label {
+  font-size: 14px;
+  color: #555;
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.inputRow input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.inputRow input:focus {
+  border-color: #007bff;
+}
+
+.inputRow button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.inputRow button:hover {
+  background: #0056b3;
+}
+
+.detailsBox {
+  margin-top: 20px;
+  background: #f9fbff;
+  border: 1px solid #d6e4ff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topRow h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+.detailsBox p {
+  margin: 8px 0;
+  color: #333;
+}
+.viewmedicien{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f8f9fa;
+    /* display: none; */
+    padding-right: 20px;
+}
+.viewmedicien span{
+    font-size: 50px;
+    display: block;
+    color: rgb(20, 1, 1);
+    width: 100%;
+    text-align: end;
 }

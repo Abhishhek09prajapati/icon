@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Search</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div>
-        <label for="">Enter Number</label>
-        <input id="customernumber" type="number">
-        <button onclick="search1()">Search</button>
+    <div class="container">
+
+        <div class="card">
+            <h2>Customer Search</h2>
+
+            <div class="searchBox">
+                <label>Enter Number</label>
+                <div class="inputRow">
+                    <input id="customernumber" type="number" placeholder="Enter mobile number" />
+                    <button onclick="search1()">Search</button>
+                </div>
+            </div>
+
+            <div id="customerDetails" class="detailsBox" style="display:none;">
+                <div class="topRow">
+                    <h3>Customer Details</h3>
+                    <span class="closeBtn" onclick="close1()">✖</span>
+                </div>
+
+                <p><b>Name:</b> <span id="custName"></span></p>
+                <p><b>Mobile:</b> <span id="custMobile"></span></p>
+                <p><b>Catagories:</b> <span id="custCatagories"></span></p>
+                <button onclick="checkmedicine()"
+                    style="background-color: #007bff;color: white;padding: 5px;border-radius: 8px;">Check
+                    Meidicine</button>
+            </div>
+        </div>
     </div>
-    <div id="customerDetails"> 
-        
+    <div class="viewmedicien">
+        <span class="closeBtn1" onclick="close2()">✖</span>
+        <ul>
+            <li>Medicine</li>
+        </ul>
     </div>
-    
+
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
+
 </html>

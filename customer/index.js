@@ -1,24 +1,37 @@
-var customerDetails = document.getElementById('customerDetails');
 function search1() {
   fetch("https://api.npoint.io/b8e4760225ed1bcf6aa4")
     .then((res) => res.json())
     .then((data) => {
-      var customerNumber = document.getElementById("customernumber").value.trim();
+      const customerNumber = document.getElementById("customernumber").value.trim();
 
-      const present = data.find((yes1) => customerNumber == yes1.Mobile);
+      const present = data.find((item) => customerNumber == item.Mobile);
 
       if (present) {
-        // var customerDetails = document.getElementById('customerDetails');
-        customerDetails.style.display = "block"
-
-        customerDetails.innerHTML = `<span onclick="close1()" style="color: black;">X</span> <h1>${present.Name}</h1> <h1>${present.Mobile}</h1>`
+        document.getElementById("customerDetails").style.display = "block";
+        document.getElementById("custName").innerText = present.Name;
+        document.getElementById("custMobile").innerText = present.Mobile;
+        document.getElementById("custCatagories").innerText = present.Catagories ;
       } else {
-        alert("❌ Not Found");
+        alert("❌ Customer Not Found");
+        document.getElementById("customerDetails").style.display = "none";
       }
     })
-    .catch((err) => console.log("Error:", err));
+    .catch((err) => {
+      console.log(err);
+      alert("❌ API Error");
+    });
 }
 
 function close1() {
-  customerDetails.style.display = "none"
+  document.getElementById("customerDetails").style.display = "none";
+}
+
+var viewmedicine = document.getElementsByClassName('viewmedicien')[0];
+
+function checkmedicine() {
+  viewmedicine.style.display = "block"
+
+}
+function close2() {
+  viewmedicine.style.display = "none"
 }
