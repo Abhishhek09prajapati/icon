@@ -8,9 +8,9 @@ function search1() {
 
       if (present) {
         document.getElementById("customerDetails").style.display = "block";
-        document.getElementById("custName").innerText = present.Name;
-        document.getElementById("custMobile").innerText = present.Mobile;
-        document.getElementById("custCatagories").innerText = present.Catagories ;
+        document.getElementById("custName").innerText = present.name;
+        document.getElementById("custMobile").innerText = present.mobile;
+        document.getElementById("custCatagories").innerText = present.category ;
       } else {
         alert("❌ Customer Not Found");
         document.getElementById("customerDetails").style.display = "none";
