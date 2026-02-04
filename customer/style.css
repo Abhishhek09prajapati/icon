@@ -100,7 +100,7 @@ body {
     top: 10px;
     left: 10px;
     background-color: #f8f9fa;
-    /* display: none; */
+    display: none;
     padding-right: 20px;
 }
 .viewmedicien span{
