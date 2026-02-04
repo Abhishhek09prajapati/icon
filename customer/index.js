@@ -4,7 +4,7 @@ function search1() {
     .then((data) => {
       const customerNumber = document.getElementById("customernumber").value.trim();
 
-      const present = data.find((item) => customerNumber == item.Mobile);
+      const present = data.find((item) => customerNumber == item.mobile);
 
       if (present) {
         document.getElementById("customerDetails").style.display = "block";
