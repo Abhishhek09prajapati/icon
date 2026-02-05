@@ -2,6 +2,8 @@ var alldata = [];
 var customerNumber = document.getElementById("customernumber")
 var searchvalue = document.getElementById('searchvalue')
 let close = document.getElementById('customerDetails')
+var customerMedicine = []
+var medicinedata = document.getElementById('medicinedata')
 
 
 customerNumber.addEventListener('input', () => {
@@ -53,26 +55,39 @@ customerNumber.addEventListener('input', () => {
       let custname = document.getElementById('custName')
       let custnumber = document.getElementById('custMobile')
       let Catagories = document.getElementById('custCatagories')
+      viewmedicien.style.display = "none"
+      medicinedata.innerHTML = ""
 
+      customerMedicine = item.medicine
       custname.innerHTML = item.name
       custnumber.innerHTML = item.mobile
       Catagories.innerHTML = item.category
 
-      close.style.display = "block"
 
+      close.style.display = "block"
     })
   })
 })
 
-function close1(){
+function close1() {
   close.style.display = "none"
 }
 
 let viewmedicien = document.getElementsByClassName('viewmedicien')[0]
 
-function close2(){
+function close2() {
   viewmedicien.style.display = "none"
 }
- function checkmedicine(){
+
+
+function checkmedicine() {
+  // console.log(customerMedicine)
+  customerMedicine.forEach(a => {
+    console.log(a)
+    let li = document.createElement('li')
+    li.style.color = "black"
+    li.innerText = a
+    medicinedata.appendChild(li)
+  })
   viewmedicien.style.display = "block"
- }
+}
