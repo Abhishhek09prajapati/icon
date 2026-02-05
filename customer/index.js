@@ -1,37 +1,78 @@
-function search1() {
+var alldata = [];
+var customerNumber = document.getElementById("customernumber")
+var searchvalue = document.getElementById('searchvalue')
+let close = document.getElementById('customerDetails')
+
+
+customerNumber.addEventListener('input', () => {
   fetch("https://api.npoint.io/b8e4760225ed1bcf6aa4")
     .then((res) => res.json())
     .then((data) => {
-      const customerNumber = document.getElementById("customernumber").value.trim();
-
-      const present = data.find((item) => customerNumber == item.mobile);
-
-      if (present) {
-        document.getElementById("customerDetails").style.display = "block";
-        document.getElementById("custName").innerText = present.name;
-        document.getElementById("custMobile").innerText = present.mobile;
-        document.getElementById("custCatagories").innerText = present.category ;
-      } else {
-        alert("❌ Customer Not Found");
-        document.getElementById("customerDetails").style.display = "none";
-      }
+      alldata = data
+    }
+    ).catch(err => {
+      console.log(err)
     })
-    .catch((err) => {
-      console.log(err);
-      alert("❌ API Error");
-    });
+
+  const value = customerNumber.value;
+  searchvalue.innerHTML = '';
+  close.style.display = "none"
+
+  if (!value) return;
+
+  if (alldata === 0) {
+    searchvalue.innerHTML = "this Number is not avaiable"
+    return
+  }
+
+  const result = alldata.filter((item) => {
+    const number = (item.mobile);
+    const name = (item.name).toLowerCase()
+    return number.includes(value) || name.includes(value)
+  })
+
+
+
+  if (result.length === 0) {
+    searchvalue.innerHTML = "this cutomer is not here"
+    return
+  }
+  result.forEach((item) => {
+    const div = document.createElement('div');
+    div.style.border = "1px solid #000";
+    div.style.padding = "8px";
+    div.style.background = "white"
+    div.style.margin = "6px 0px";
+    div.style.cursor = "pointer";
+    div.innerHTML = `
+      <b>${item.mobile || item.name}</br>`;
+    searchvalue.appendChild(div)
+
+
+    div.addEventListener('click', () => {
+      let custname = document.getElementById('custName')
+      let custnumber = document.getElementById('custMobile')
+      let Catagories = document.getElementById('custCatagories')
+
+      custname.innerHTML = item.name
+      custnumber.innerHTML = item.mobile
+      Catagories.innerHTML = item.category
+
+      close.style.display = "block"
+
+    })
+  })
+})
+
+function close1(){
+  close.style.display = "none"
 }
 
-function close1() {
-  document.getElementById("customerDetails").style.display = "none";
-}
+let viewmedicien = document.getElementsByClassName('viewmedicien')[0]
 
-var viewmedicine = document.getElementsByClassName('viewmedicien')[0];
-
-function checkmedicine() {
-  viewmedicine.style.display = "block"
-
+function close2(){
+  viewmedicien.style.display = "none"
 }
-function close2() {
-  viewmedicine.style.display = "none"
-}
+ function checkmedicine(){
+  viewmedicien.style.display = "block"
+ }

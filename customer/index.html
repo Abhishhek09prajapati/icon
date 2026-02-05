@@ -9,40 +9,49 @@
 </head>
 
 <body>
-    <div class="container">
 
+    <div class="container">
         <div class="card">
             <h2>Customer Search</h2>
 
             <div class="searchBox">
-                <label>Enter Number</label>
+                <label>Enter Mobile Number</label>
                 <div class="inputRow">
-                    <input id="customernumber" type="number" placeholder="Enter mobile number" />
-                    <button onclick="search1()">Search</button>
+                    <input id="customernumber" type="text" placeholder="Enter mobile number" />
+
                 </div>
             </div>
 
-            <div id="customerDetails" class="detailsBox" style="display:none;">
-                <div class="topRow">
+            <div id="customerDetails" class="detailsBox">
+                <div class=" topRow">
                     <h3>Customer Details</h3>
                     <span class="closeBtn" onclick="close1()">✖</span>
                 </div>
 
-                <p><b>Name:</b> <span id="custName"></span></p>
+                <p><b>Name:</b> <span id="custName">anj</span></p>
                 <p><b>Mobile:</b> <span id="custMobile"></span></p>
-                <p><b>Catagories:</b> <span id="custCatagories"></span></p>
-                <button onclick="checkmedicine()"
-                    style="background-color: #007bff;color: white;padding: 5px;border-radius: 8px;">Check
-                    Meidicine</button>
+                <p><b>Categories:</b> <span id="custCatagories"></span></p>
+
+                <button class="medicineBtn" onclick="checkmedicine()">
+                    Check Medicine
+                </button>
+                <div class="viewmedicien" style="display: none;">
+                    <span class="closeBtn1" onclick="close2()">✖</span>
+                    <ul>
+                        <li>Medicine</li>
+                    </ul>
+                </div>
             </div>
+            <!-- Medicine popup -->
+
+
+            <!-- live search results -->
+            <div id="searchvalue" class="suggestions"></div>
         </div>
+
     </div>
-    <div class="viewmedicien">
-        <span class="closeBtn1" onclick="close2()">✖</span>
-        <ul>
-            <li>Medicine</li>
-        </ul>
-    </div>
+
+
 
     <script src="index.js"></script>
 </body>
