@@ -81,13 +81,22 @@ function close2() {
 
 
 function checkmedicine() {
-  // console.log(customerMedicine)
-  customerMedicine.forEach(a => {
-    console.log(a)
-    let li = document.createElement('li')
-    li.style.color = "black"
-    li.innerText = a
-    medicinedata.appendChild(li)
-  })
-  viewmedicien.style.display = "block"
+  // safety check
+  if (!Array.isArray(customerMedicine)) {
+    console.log("customerMedicine is not an array");
+    return;
+  }
+
+  // clear old data
+  medicinedata.innerHTML = "";
+
+  customerMedicine.forEach((a) => {
+    let li = document.createElement("li");
+    li.style.color = "black";
+    li.innerText = a;
+
+    medicinedata.appendChild(li);
+  });
+
+  viewmedicien.style.display = "block";
 }
