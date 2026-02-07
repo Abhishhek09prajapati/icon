@@ -1,6 +1,7 @@
 const inputsearch = document.getElementById("searchinput");
 const dataresult = document.getElementById("resultdata");
 const closebtn1 = document.getElementById("list");
+const notics1 = document.getElementById('notics1');
 
 let allData = [];
 let medicne2 = [];
@@ -9,20 +10,32 @@ closebtn1.style.display = "none";
 dataresult.innerHTML = "<p>Loading data...</p>";
 
 
-fetch("https://api.npoint.io/03185e6a9bfcd7262ccc")
-  .then((res) => res.json())
-  .then((data) => {
-    allData = data;
-    dataresult.innerHTML = "";
-  })
-  .catch((err) => {
-    dataresult.innerHTML = "<p>Error loading data</p>";
-    console.log(err);
-  });
+window.onload = function () {
+    data1()
+};
+
+function data1() {
+  fetch("https://api.npoint.io/03185e6a9bfcd7262ccc")
+    .then((res) => res.json())
+    .then((data) => {
+      allData = data;
+      dataresult.innerHTML = "";
+    })
+    .catch((err) => {
+      dataresult.innerHTML = "<p>Error loading data</p>";
+      console.log(err);
+    });
+}
+
+
+
+
+
 
 inputsearch.addEventListener("input", () => {
   const value = inputsearch.value.trim().toLowerCase();
   dataresult.innerHTML = "";
+  notics1.style.display = "none"
 
   if (!value) return;
 

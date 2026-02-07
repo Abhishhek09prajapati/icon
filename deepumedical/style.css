@@ -131,3 +131,13 @@ button {
 .inquiry:hover {
     background-color: #1e8449;
 }
+
+.notics {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-image: radial-gradient(rgb(248, 178, 178),white,rgb(252, 154, 154));
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
