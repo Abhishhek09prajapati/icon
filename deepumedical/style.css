@@ -133,10 +133,9 @@ button {
 }
 
 .notics {
-    width: max-content;
     height: 500px;
     border: 1px solid black;
-    background-image: radial-gradient(rgb(248, 178, 178),white,rgb(252, 154, 154));
+    background-image: radial-gradient(rgb(192, 5, 5),rgb(230, 38, 38),rgb(252, 154, 154));
     padding: 20px;
     text-align: center;
     margin: auto;

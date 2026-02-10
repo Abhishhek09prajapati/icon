@@ -33,16 +33,16 @@ function addTable() {
     document.getElementById("date1").innerText = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
 
-    var rate = mrp - mrp * discount / 100;
-    var total = rate * qty;
+    var rate = Math.round(mrp - mrp*discount/100);
+    var total = rate*qty;
 
-    totalmrp += mrp * qty;
+    totalmrp += mrp*qty;
 
     result += total;
 
 
     document.getElementById('result').innerHTML = "Total Amount " + result;
-    document.getElementById('totalmrp').innerHTML = `Aapka total mrp yeh hai ${totalmrp} rs hai`;
+    document.getElementById('totalmrp').innerHTML = `Aapka total mrp yeh hai ${totalmrp.toFixed(2)} rs hai`;
 
 
     const tablebody = document.getElementById('dataTable').querySelector('tbody');
