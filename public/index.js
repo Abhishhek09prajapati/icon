@@ -6,6 +6,9 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(cors({
+    origin: ["https://iconstarbusiness.store"]
+}));
 // Static login folder
 app.use(express.static(path.join(__dirname)));
 // Correct sendFile (must be file, not folder)
@@ -131,7 +134,7 @@ app.get("/u", async (req, res) => {
 
 app.post('/p', async (req, res) => {
 
-    const { usernumber, password, device } = req.body;    
+    const { usernumber, password, device } = req.body;
     res.json({ usernumber, password, device })
 
 
@@ -255,9 +258,6 @@ app.post('/updatewallet', async (req, res) => {
             }
 
         )
-
-
-
         res.json({ amount1, number });
     } catch (err) {
 

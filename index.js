@@ -9,10 +9,7 @@ async function loginUser() {
 
     let deviceId = crypto.randomUUID();
     localStorage.setItem("deviceId", deviceId);
-    const device = { deviceId }
-
-
-
+    const device = { deviceId };
     if (usernumber === "" || password === "") {
         message.style.color = "red";
         message.innerHTML = "Please fill all fields ❌";
@@ -22,7 +19,7 @@ async function loginUser() {
 
 };
 
-async function loadUsers(a, b ,c) {
+async function loadUsers(a, b, c) {
     try {
         const res = await fetch("https://iconstarbusiness.store/u");
         const data = await res.json();
