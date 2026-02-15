@@ -40,7 +40,7 @@ function copyRefLink() {
 async function user(a) {
 
     document.getElementById('view').innerHTML = "";
-    const res = await fetch('http://localhost:5000/u');
+    const res = await fetch('https://iconstarbusiness.store/u');
     const data = await res.json();   
 
     const userdata = data.find(u => number == u.number);

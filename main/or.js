@@ -4,7 +4,7 @@ var number = localStorage.getItem("usernumber")
 
 async function loadUsers(a) {
     try {
-        const res = await fetch("http://localhost:5000/u");
+        const res = await fetch("https://iconstarbusiness.store/u");
         const data = await res.json();
 
         const user = data.find(u => a == u.number);
@@ -52,7 +52,7 @@ async function userdata1() {
 
 
     try {
-        const res1 = await fetch('http://localhost:5000/o', {
+        const res1 = await fetch('https://iconstarbusiness.store/o', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -97,7 +97,7 @@ async function comparepromocode() {
 
     try {
 
-        const res2 = await fetch('http://localhost:5000/k', {
+        const res2 = await fetch('https://iconstarbusiness.store/k', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -113,7 +113,7 @@ async function comparepromocode() {
         );
 
 
-        const userinfo = await fetch('http://localhost:5000/u');
+        const userinfo = await fetch('https://iconstarbusiness.store/u');
         const userinfo1 = await userinfo.json()
         const userfilter = await userinfo1.find(o => number == o.number);
         const userfiltername = userfilter.name;
@@ -132,7 +132,7 @@ async function comparepromocode() {
         if (matchpromocode) {
             try {
                 const addamountvalue = { userfiltername, amount1, number, amount, addamount, referamount, referwallet, refernumber, promocode }
-                const updatewallet = await fetch('http://localhost:5000/updatewallet', {
+                const updatewallet = await fetch('https://iconstarbusiness.store/updatewallet', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
