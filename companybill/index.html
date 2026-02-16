@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="first">
+            <div class="first1" onclick="addpart()">
+
+            </div>
+            <div class="first2">
+                <span>M/s Deepu Medicla LKO</span>
+                <span>ED-352 Sector-Q Aliganj Lucknow</span>
+                <span>GST :Licence No: UP32200001921 , UP32210001917 </span>
+                <span>Phone No. 9129565221 </span>
+            </div>
+            <div class="first3">
+                <span style="font-size: 20px;">Goods Return</span>
+                <span id="partyname1">A.K Pharma</span>
+                <span id="partyaddress1">Shop NO. 3,2nd Floor,Soloman Market,Anminabad, Lucknow</span>
+                <span id="partynumber1">Phone : 0522-4065751,9628888821</span>
+                <span id="partygst1">09ALIPK8390G1ZN</span>
+                <span id="partylincese1">Licence No. UP3220B003719,UP3221B003703</span>
+            </div>
+            <div class="partynamelist">
+                <div onclick="closeit()" style="font-size: 30px;position: relative;left: 80%;">X</div>
+                <input  id="partyname" placeholder="Party Name" type="text">
+                <input id="partyaddress"  placeholder="Party Address" type="text">
+                <input id="partynumber" placeholder="Party Number" type="text">
+                <input id="partygst" placeholder="Party GST" type="text">
+                <input id="partylincese" placeholder="Party Lincese" type="text">
+                <button onclick="partychange()">Edit Party</button>
+            </div>
+        </div>
+        <div class="second" style="height: 250px; border: 1px solid black;">
+            <table>
+                <tr>
+                    <th>Sn.</th>
+                    <th>HSN</th>
+                    <th>Items Name</th>
+                    <th>Company</th>
+                    <th>Pack</th>
+                    <th>Qty</th>
+                    <th>Exp.</th>
+                    <th>Batch</th>
+                    <th>MRP</th>
+                    <th>Rate</th>
+                    <th>his.</th>
+                    <th>SGST</th>
+                    <th>CGST</th>
+                    <th>Amount</th>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>30049088</td>
+                    <td>4Sachet+</td>
+                    <td>MANEESH</td>
+                    <td>1*3.04</td>
+                    <td onclick="amount()">30</td>
+                    <td>6/28</td>
+                    <td>4SM2506</td>
+                    <td>41.34</td>
+                    <td>31.50</td>
+                    <td>5.00</td>
+                    <td>2.50</td>
+                    <td>2.50</td>
+                    <td>945.00</td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="third" style="display: flex; padding: 10px; margin: 10px; box-sizing: border-box;">
+            <div style="margin: 4px;">
+                <table class="gst">
+                    <tr>
+                        <td>Class</td>
+                        <td>Total</td>
+                        <td>SCH.</td>
+                        <td>DISC.</td>
+                        <td>SGST</td>
+                        <td>CGST</td>
+                        <td>Total GST</td>
+                    </tr>
+                    <tr>
+                        <td>GST 5.00</td>
+                        <td>945</td>
+                        <td>0.00</td>
+                        <td>47.25</td>
+                        <td>22.44</td>
+                        <td>22.44</td>
+                        <td>44.88</td>
+                    </tr>
+                    <tr>
+                        <td>GST 12.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>GST 18.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>GST 28.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>945.00</td>
+                        <td>0.00</td>
+                        <td>47.25</td>
+                        <td>23.62</td>
+                        <td>23.62</td>
+                        <td>47.24</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin: 4px;">
+                <table class="summary">
+                    <tr>
+                        <td>SUB Total</td>
+                        <td>897.75</td>
+                    </tr>
+                    <tr>
+                        <td>SGST PAYABLE</td>
+                        <td>22.44</td>
+                    </tr>
+                    <tr>
+                        <td>CGST</td>
+                        <td>22.44</td>
+                    </tr>
+                    <tr>
+                        <td>ADD/LESS</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>CR/DR NOTE</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <th>GRAND TOTAL</th>
+                        <th>943</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="four">
+            For Deepu Medical
+        </div>
+    </div>
+    <div class="addamount">
+        <input id="addamountval" type="number">
+        <button onclick="amountadd()">Add Amount</button>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
+<td></td>
+<td></td>

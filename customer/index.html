@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Search</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2>Customer Search</h2>
+
+            <div class="searchBox">
+                <label>Enter Mobile Number</label>
+                <div class="inputRow">
+                    <input id="customernumber" type="text" placeholder="Enter mobile number" />
+
+                </div>
+            </div>
+
+            <div id="customerDetails" class="detailsBox">
+                <div class=" topRow">
+                    <h3>Customer Details</h3>
+                    <span class="closeBtn" onclick="close1()">✖</span>
+                </div>
+
+                <p><b>Name:</b> <span id="custName">anj</span></p>
+                <p><b>Mobile:</b> <span id="custMobile"></span></p>
+                <p><b>Categories:</b> <span id="custCatagories"></span></p>
+
+                <button class="medicineBtn" onclick="checkmedicine()">
+                    Check Medicine
+                </button>
+                <div class="viewmedicien" style="display: none;">
+                    <span class="closeBtn1" onclick="close2()">✖</span>
+                    <ul id="medicinedata" type="none"></ul>
+                </div>
+            </div>
+            <!-- Medicine popup -->
+            <!-- live search results -->
+            <div id="searchvalue" class="suggestions"></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

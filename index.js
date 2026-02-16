@@ -1,49 +1,16 @@
 
-const url = "https://iconstarbusiness.store"
-const url1 = "http://localhost:5000"
+var name1 = document.getElementById('name1');
+var mobile1 = document.getElementById('mobile1');
+var address1 = document.getElementById('address1');
 
+document.getElementById('messagetowhatsapp').addEventListener('click', () => {
 
-async function loginUser() {
-    const usernumber = document.getElementById("usernumber").value;
-    const password = document.getElementById("password").value;
-    const message = document.getElementById("message");
-
-
-    let deviceId = crypto.randomUUID();
-    localStorage.setItem("deviceId", deviceId);
-    const device = { deviceId };
-    if (usernumber === "" || password === "") {
-        message.style.color = "red";
-        message.innerHTML = "Please fill all fields ❌";
-        return;
+    if (!name1.value || !mobile1.value || !address1.value) {
+        alert("please fill all")
+    } else {
+        var message = ` ${name1.value}  ${mobile1.value} ${address1.value}`;
+        window.location.href = `https://wa.me/916387215755?text=${message}`
     }
-    loadUsers(usernumber, password, device);
-
-};
-
-async function loadUsers(a, b, c) {
-    try {
-        const res = await fetch(`${url}/u`);
-        const data = await res.json();
-
-        const user = data.find(u => a == u.number);
-
-        if (user) {
-            if (a == user.number && b == user.password) {
+});
 
 
-                localStorage.setItem("isLoggedIn", "true");
-                localStorage.setItem("usernumber", user.number);
-                localStorage.setItem("position", user.position);
-                window.location.href = "../main/"
-
-            } else {
-                alert("Please Inter Correct Password")
-            }
-        } else {
-            alert("❌ User Not Found");
-        }
-    } catch (err) {
-        console.log("Fetch Error:", err);
-    }
-}
