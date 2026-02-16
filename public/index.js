@@ -267,9 +267,9 @@ app.post('/updatewallet', async (req, res) => {
 });
 
 /* ✅ Server */
-// app.listen(process.env.port, () => {
-//     console.log("Server Running on Port 5000 🚀");
-// });
+app.listen(process.env.port, () => {
+    console.log("Server Running on Port 5000 🚀");
+});
 
 
 

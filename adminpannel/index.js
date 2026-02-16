@@ -1,4 +1,4 @@
-const url = "https://iconstarbusiness.store/"
+const url = "https://iconstarbusiness.store"
 async function saveHistory() {
 
     const wallet = document.getElementById("wallet").value;
@@ -9,7 +9,7 @@ async function saveHistory() {
 
     try {
 
-        const res = await fetch(`${url}addWallet`, {
+        const res = await fetch(`${url}/addWallet`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
