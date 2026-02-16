@@ -1,7 +1,7 @@
 var mobile = localStorage.getItem('position');
 var mob = localStorage.getItem('usernumber')
 
-
+const url = "https://iconstarbusiness.store/"
 
 async function callpostion() {
 
@@ -42,7 +42,7 @@ async function addUser() {
     const userdata = { name, number, gmail, address, position, password, mob };
 
     try {
-        const res = await fetch("https://iconstarbusiness.store/add-user", {
+        const res = await fetch(`${url}add-user`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(userdata)

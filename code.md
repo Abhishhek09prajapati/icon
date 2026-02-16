@@ -7,3 +7,6 @@
 
 
  <span class="material-symbols-outlined">home</span>
+
+
+ mongodb+srv://Mywork:lZ3kpeL6TsVtE3Rr@myproject.25lhwvw.mongodb.net/joobearning

@@ -1,4 +1,6 @@
 var number = localStorage.getItem("usernumber")
+const url = "https://iconstarbusiness.store/"
+
 // {todayincome: '100', yesterdayincome: '500', monthly: '2500', totalincome: '58000'}
 
 
@@ -52,7 +54,7 @@ async function userdata1() {
 
 
     try {
-        const res1 = await fetch('https://iconstarbusiness.store/o', {
+        const res1 = await fetch(`${url}o`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -97,7 +99,7 @@ async function comparepromocode() {
 
     try {
 
-        const res2 = await fetch('https://iconstarbusiness.store/k', {
+        const res2 = await fetch(`${url}k`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -113,7 +115,7 @@ async function comparepromocode() {
         );
 
 
-        const userinfo = await fetch('https://iconstarbusiness.store/u');
+        const userinfo = await fetch(`${url}u`);
         const userinfo1 = await userinfo.json()
         const userfilter = await userinfo1.find(o => number == o.number);
         const userfiltername = userfilter.name;
@@ -132,7 +134,7 @@ async function comparepromocode() {
         if (matchpromocode) {
             try {
                 const addamountvalue = { userfiltername, amount1, number, amount, addamount, referamount, referwallet, refernumber, promocode }
-                const updatewallet = await fetch('https://iconstarbusiness.store/updatewallet', {
+                const updatewallet = await fetch(`${url}updatewallet`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

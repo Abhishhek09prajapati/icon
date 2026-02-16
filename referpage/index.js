@@ -2,7 +2,7 @@
 
 const number = localStorage.getItem("usernumber");
 const position1 = localStorage.getItem("position");
-
+const url = "https://iconstarbusiness.store/"
 
 var s1 = document.getElementById('s');
 var m1 = document.getElementById('m');
@@ -40,7 +40,7 @@ function copyRefLink() {
 async function user(a) {
 
     document.getElementById('view').innerHTML = "";
-    const res = await fetch('https://iconstarbusiness.store/u');
+    const res = await fetch(`${url}u`);
     const data = await res.json();   
 
     const userdata = data.find(u => number == u.number);

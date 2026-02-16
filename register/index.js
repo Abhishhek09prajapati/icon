@@ -1,7 +1,7 @@
 // Auto-fill referral code from URL
-const params =  `${window.location.origin}`;
+const params = `${window.location.origin}`;
 const ref = params.get("ref");
-
+const url = "https://iconstarbusiness.store/"
 if (ref) {
     document.getElementById("referrer").value = ref;
 }
@@ -16,7 +16,7 @@ async function registerUser() {
     const userdata = { name, number, password, referrer };
 
     try {
-        const res = await fetch("https://iconstarbusiness.store/register", {
+        const res = await fetch(`${url}register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(userdata)

@@ -1,4 +1,5 @@
 
+const url = "https://iconstarbusiness.store/"
 
 
 async function loginUser() {
@@ -21,7 +22,7 @@ async function loginUser() {
 
 async function loadUsers(a, b, c) {
     try {
-        const res = await fetch("https://iconstarbusiness.store/u");
+        const res = await fetch(`${url}u`);
         const data = await res.json();
 
         const user = data.find(u => a == u.number);
