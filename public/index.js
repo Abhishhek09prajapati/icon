@@ -72,7 +72,7 @@ const userSchema = new mongoose.Schema({
 
 });
 /* ✅ Model */
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("users", userSchema);
 
 app.post("/add-user", async (req, res) => {
     try {
