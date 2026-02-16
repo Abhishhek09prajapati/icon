@@ -1,5 +1,5 @@
 
-const url = "https://www.iconstarbusiness.store"
+const url = "https://iconstarbusiness.store"
 const url1 = "http://localhost:5000"
 
 
