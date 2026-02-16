@@ -42,10 +42,7 @@ async function loadUsers(a, b, c) {
         } else {
             alert("❌ User Not Found");
         }
-
-
-
     } catch (err) {
-        console.log("Fetch Error:", err);
+        console.log("Fetch Error:");
     }
 }
