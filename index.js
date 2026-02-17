@@ -19,7 +19,6 @@ async function loginUser() {
         return;
     }
     loadUsers(usernumber, password, device);
-
 };
 
 async function loadUsers(a, b ,c) {
