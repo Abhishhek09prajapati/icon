@@ -1,5 +1,5 @@
 
-const local = 'https://iconstarbusiness.store/'
+const local = ''
 
 async function loginUser() {
     const usernumber = document.getElementById("usernumber").value;
@@ -24,7 +24,7 @@ async function loginUser() {
 
 async function loadUsers(a, b ,c) {
     try {
-        const res = await fetch(`${local}u`);
+        const res = await fetch(`https://iconstarbusiness.store/u`);
         const data = await res.json();
 
         const user = data.find(u => a == u.number);
